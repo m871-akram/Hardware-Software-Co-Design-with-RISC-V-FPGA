@@ -8,7 +8,7 @@ TESTS_DIR ?= program/autotest/
 LOG ?= log
 
 
-.PHONY: compile simulation synthesis fpga autotest clean realclean check_PROG
+.PHONY: compile simulation synthesis fpga autotest clean realclean check_PROG compile_invaders_sim
 
 ## Main rule
 all: help
@@ -92,6 +92,37 @@ realclean:
 	@$(MAKE) -s -f $(AUTOTEST_MK) realclean
 	@$(MAKE) -s -f $(SYNTHESIS_MK) realclean
 	@$(MAKE) -s -f $(SIMULATION_MK) realclean
+
+## --- GHDL simulation targets ---
+
+CC_SIM      := /opt/homebrew/bin/riscv64-unknown-elf-gcc
+OBJDUMP_SIM := /opt/homebrew/bin/riscv64-unknown-elf-objdump
+OBTOMEM     := bin/objtomem.awk
+
+CFLAGS_SIM  := -Os -march=rv32i -mabi=ilp32 -mcmodel=medany \
+               -ffunction-sections -fdata-sections \
+               -fno-builtin \
+               -DENV_FPGA=1 -DENV_SIM=1 \
+               -Iprogram/invaders
+
+LDFLAGS_SIM := -nostartfiles -nodefaultlibs \
+               -T config/invaders_sim.ld \
+               -Wl,--gc-sections
+
+# Compile Space Invaders for GHDL simulation (320x240, fast timer, no libfemto)
+compile_invaders_sim: mem/invaders_sim.mem
+
+mem/invaders_sim.elf: program/invaders/invaders.c program/invaders/invaders.h \
+                      program/invaders/cep_platform.h config/invaders_sim.ld
+	@mkdir -p mem
+	$(CC_SIM) $(CFLAGS_SIM) $(LDFLAGS_SIM) \
+	    -o $@ program/invaders/invaders.c -lgcc
+
+mem/invaders_sim.mem: mem/invaders_sim.elf
+	$(OBJDUMP_SIM) --section=.text --section=.data --section=.rodata \
+	               --section=.bss --section=.sdata -s $< \
+	    | awk -f $(OBTOMEM) > $@
+	@echo "Generated $@ (size: $$(wc -l < $@) lines)"
 
 # Help message
 help:

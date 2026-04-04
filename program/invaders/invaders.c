@@ -13,12 +13,14 @@
  * ---------------------------------------------------------------------------
  */
 /* Do not use default config in cep_platform.h */
-#if 1
 #undef DISPLAY_WIDTH
 #undef DISPLAY_HEIGHT
-
+#ifdef ENV_SIM
+#define DISPLAY_WIDTH  320      /* reduced resolution for GHDL simulation */
+#define DISPLAY_HEIGHT 240
+#else
 #define DISPLAY_WIDTH  1280     /* display width resolution */
-#define DISPLAY_HEIGHT 720     /* display height resolution */
+#define DISPLAY_HEIGHT 720      /* display height resolution */
 #endif
 #define N_OBJECTS 7             /* displayed objects (aliens, laser, spaceship) */
 
@@ -157,6 +159,11 @@ int main(void)
    spaceship->x = 29;          /* set spaceship at the middle */
    spaceship->y = 31;          /* and bottom of the screen */
 #define MAX_X 58
+#elif DISPLAY_HEIGHT == 240
+   *(volatile uint32_t*)FRAME_BUFFER_CTRL_MODE_REG = 0; /* unmapped in simulation, ignored */
+   spaceship->x = 5;           /* set spaceship at the middle */
+   spaceship->y = 6;           /* and bottom of the screen */
+#define MAX_X 9
 #else
 #error "Illegal HDMI mode for Invaders, refusing to fight !"
 #endif
@@ -302,7 +309,7 @@ void write_pixel_scaling(int pixel, int x, int y)
    }
 }
 
-void *memset(volatile uint8_t *dest, uint32_t c, uint32_t n)
+void *custom_memset(volatile uint8_t *dest, uint32_t c, uint32_t n)
 {
    volatile uint8_t *p = dest;
    while (n-- > 0) {
@@ -349,6 +356,15 @@ void initialize()
       object[i].deadline = 1;
       if (i > 1) {
          /* aliens */
+#if DISPLAY_HEIGHT == 240
+         if (i > 4) {
+            object[i].y = 3;
+            object[i].x = 2 + (i - 4) * 4;
+         } else {
+            object[i].y = 1;
+            object[i].x = 1 + (i - 2) * 3;
+         }
+#else
          if (i > 4) {
             /* alien4 or alien5 */
             object[i].y = 3;    /* 3rd line */
@@ -358,6 +374,7 @@ void initialize()
             object[i].y = 1;    /* 1st line */
             object[i].x = 10 + (i - 2) * 8;
          }
+#endif
          object[i].dx = -1;
          object[i].dy = 0;
       }

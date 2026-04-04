@@ -149,7 +149,7 @@ architecture arch_imp of PROC_AXI is
 		M_AXI_RVALID	: in std_logic;
 		M_AXI_RREADY	: out std_logic
 		);
-	end component PROC_reader_v1_0_M_AXI;
+	end component PROC_AXI_MASTER;
 
 	signal din_d, din_q : std_logic_vector(C_M_AXI_DATA_WIDTH-1 downto 0);
 	signal addr_d, addr_q : std_logic_vector(C_M_AXI_ADDR_WIDTH-1 downto 0);

@@ -1,0 +1,41 @@
+# GHDL compiled files
+*.o
+*.cf
+e~*.o
+ghdl_work/
+
+# Compiled binaries
+bin/img_to_mem
+tb_autotest
+tb_video_dump
+test08
+
+# Memory and ELF files (generated)
+mem/*.elf
+mem/*.mem
+
+# Simulation outputs
+sim/**/*.out
+sim/vram_writes.txt
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# CEP cache
+.CEPcache/
+
+# Claude AI files
+.claude/
+
+CLAUDE.md
+
+TODO.md

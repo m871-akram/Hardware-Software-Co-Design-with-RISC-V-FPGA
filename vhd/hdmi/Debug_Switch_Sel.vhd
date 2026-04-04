@@ -83,7 +83,9 @@ begin
 			debug_leds <= debug_signal14;
 		when "1111" =>
 			debug_leds <= debug_signal15;
-		end case;	
+		when others =>
+			null;
+		end case;
 	end process;
 end architecture;
 

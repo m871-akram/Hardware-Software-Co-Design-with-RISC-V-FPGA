@@ -15,6 +15,17 @@ function swapbytes(drow) {
     return substr(drow, 7, 2) substr(drow, 5, 2) substr(drow, 3, 2) substr(drow, 1, 2)
 }
 
+# POSIX-compatible hex string to integer (replaces gawk's strtonum)
+function hex2int(h,    i, c, v) {
+    v = 0
+    h = tolower(h)
+    for (i = 1; i <= length(h); i++) {
+        c = substr(h, i, 1)
+        v = v * 16 + index("0123456789abcdef", c) - 1
+    }
+    return v
+}
+
 function writemem(addr, section) {
     printf("@%08x\n", addr) # Adresse formatée
     # On a aligné sur un multiple de 8, let's go
@@ -36,10 +47,10 @@ function writemem(addr, section) {
     content = ""
 }
 
-/^\s*[0-9a-f]+/ {
+/^[ \t]*[0-9a-f]+/ {
     if (section) {
-        addr = strtonum("0x" $1)
-        start_addr = strtonum("0x" $1) / 4
+        addr = hex2int($1)
+        start_addr = hex2int($1) / 4
         if (addr != start_addr * 4) {
             print("Début de section non alignée : "addr) > "/dev/stderr"
             exit

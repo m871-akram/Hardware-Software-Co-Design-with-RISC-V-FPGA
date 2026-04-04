@@ -30,8 +30,11 @@
 #define CLINT_TIMER_HI                  0x0200bffc
 #define CLINT_TIMER_LOW                 0x0200bff8
 
-// Display: choose 720p by default
-#if 1
+// Display: 320x240 for GHDL simulation, 720p for FPGA
+#ifdef ENV_SIM
+#define DISPLAY_WIDTH                   320
+#define DISPLAY_HEIGHT                  240
+#elif 1
 #define DISPLAY_WIDTH                   1280
 #define DISPLAY_HEIGHT                  720
 #else
@@ -53,12 +56,15 @@
 #define HDMI_MODE_1080p_30Hz_blk_2      34
 
 // Timer options
-#ifdef ENV_QEMU 
-#define TIMER_FREQ 10000000 // 10MHz
-#define TIMER_RATIO 500  
+#ifdef ENV_QEMU
+#define TIMER_FREQ  10000000 // 10 MHz
+#define TIMER_RATIO 500
+#elif defined(ENV_SIM)
+#define TIMER_FREQ  50000    // ~1000x faster: each game loop waits ~780 ticks @ 50 MHz = 15 us
+#define TIMER_RATIO 200
 #else
-#define TIMER_FREQ 100000000 // 100MHz
-#define TIMER_RATIO 200 
+#define TIMER_FREQ  100000000 // 100 MHz
+#define TIMER_RATIO 200
 #endif
 
 void timer_set(uint32_t period, uint32_t start_value);

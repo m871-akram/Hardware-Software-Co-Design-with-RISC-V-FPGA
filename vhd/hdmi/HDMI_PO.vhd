@@ -63,7 +63,7 @@ architecture po of HDMI_PO is
 	signal encoded_signal : tmds_signal_vector(2 downto 0);	
 	signal output : tmds_signal_vector(2 downto 0);	
 
-	signal encoding_type : ENCODING_TYPE;
+	signal enc_type_s : ENCODING_TYPE;
 	
 	-- Contient les données sur l'écran.
 	signal screen : SCREEN_SIZE_DATA;
@@ -81,7 +81,7 @@ begin
 			D_video => video_q(i),
 			D_control => control(i),
 			D_auxiliary => aux(i),
-			encoding_type => encoding_type,
+			encoding_type => enc_type_s,
 			clk => pixel_clk,
 			rst => rst,
 			q_out => encoded_signal(i)
@@ -207,23 +207,23 @@ begin
 		
 		output <= encoded_signal;
 		
-		encoding_type <= ENCODING_VIDEO;
+		enc_type_s <= ENCODING_VIDEO;
 
 		-- Sélection du signal de sortie en fonction du type de données demandé.
 		case data_type_q is
 			when DATA_BLANK =>
 				control(0) <= cmd.vsync & cmd.hsync;
-				encoding_type <= ENCODING_CONTROL;
+				enc_type_s <= ENCODING_CONTROL;
 			when DATA_CONTROL =>
 				control(0) <= cmd.vsync & cmd.hsync;
 				control(1) <= cmd.ctl(1 downto 0);
 				control(2) <= cmd.ctl(3 downto 2);
-				encoding_type <= ENCODING_CONTROL;
+				enc_type_s <= ENCODING_CONTROL;
 			when DATA_VIDEO =>
 				if valid = '1' then
 					ack <= '1';
 				end if;
-				encoding_type <= ENCODING_VIDEO;
+				enc_type_s <= ENCODING_VIDEO;
 			when DATA_GUARD_VIDEO =>
 				output(0) <= "1011001100";
 				output(1) <= "0100110011";
@@ -244,12 +244,12 @@ begin
 						end loop;
 					end loop;
 				end if;
-				encoding_type <= ENCODING_AUXILIARY;	
+				enc_type_s <= ENCODING_AUXILIARY;	
 			when DATA_GUARD_AUX =>
 				aux(0) <= "11" & cmd.vsync & cmd.hsync;	
 				output(1) <= "0100110011";
 				output(2) <= "0100110011";
-				encoding_type <= ENCODING_AUXILIARY;
+				enc_type_s <= ENCODING_AUXILIARY;
 		end case;
 
 		-- Mise à jour du compteur
