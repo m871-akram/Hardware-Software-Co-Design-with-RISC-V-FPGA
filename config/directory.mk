@@ -13,7 +13,7 @@ else
   TMP_DIR := /tmp/$(USR_DIR)
 endif
 
-RVDIR         ?= /matieres/3MMCEP/riscv
+RVDIR         ?= /opt/homebrew
 TOOLCHAIN_DIR := $(RVDIR)/bin
 FEMTO_DIR     := $(RVDIR)
 

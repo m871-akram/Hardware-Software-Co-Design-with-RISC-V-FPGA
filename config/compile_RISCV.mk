@@ -19,8 +19,19 @@ include config/quiet.mk
 
 VERBOSE :=-intstyle xflow # mettre xflow ou silent
 
-## RISCV Toolchain
-PREFIX        ?= riscv32-unknown-elf-
+# ## RISCV Toolchain
+# PREFIX        ?= riscv32-unknown-elf-
+# AS            := $(TOOLCHAIN_DIR)/$(PREFIX)as
+# CC            := $(TOOLCHAIN_DIR)/$(PREFIX)gcc
+# LD            := $(TOOLCHAIN_DIR)/$(PREFIX)ld
+# OBJDUMP       := $(TOOLCHAIN_DIR)/$(PREFIX)objdump
+
+## RISCV Toolchain (Mac M1 Fix)
+# We override the directory to point to Homebrew
+TOOLCHAIN_DIR := /opt/homebrew/bin
+# We use the 64-bit toolchain (it works for 32-bit targets too)
+PREFIX        := riscv64-unknown-elf-
+
 AS            := $(TOOLCHAIN_DIR)/$(PREFIX)as
 CC            := $(TOOLCHAIN_DIR)/$(PREFIX)gcc
 LD            := $(TOOLCHAIN_DIR)/$(PREFIX)ld

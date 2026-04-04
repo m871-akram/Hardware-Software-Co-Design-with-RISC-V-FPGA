@@ -8,9 +8,9 @@ ifeq ($(filter $(TOP),$(TOP_OK)),)
 endif
 
 # Xilinx tools
-ifeq ($(origin XILINX_VIVADO), undefined)
-  $(error "Outils Xilinx introuvables, lancer source /bigsoft/Xilinx/Vivado/2019.1/settings64.sh")
-endif
+# ifeq ($(origin XILINX_VIVADO), undefined)
+#   $(error "Outils Xilinx introuvables, lancer source /bigsoft/Xilinx/Vivado/2019.1/settings64.sh")
+# endif
 XILINX_PREFIX ?= $(XILINX_VIVADO)/bin/
 
 # Log level
