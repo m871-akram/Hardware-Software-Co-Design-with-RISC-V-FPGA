@@ -9,6 +9,8 @@ bin/img_to_mem
 tb_autotest
 tb_video_dump
 test08
+bin/*
+
 
 # Memory and ELF files (generated)
 mem/*.elf
