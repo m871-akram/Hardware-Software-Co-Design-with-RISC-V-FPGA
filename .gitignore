@@ -1,43 +1,60 @@
+# =========================
+# Build & Compiled Files
+# =========================
+
 # GHDL compiled files
 *.o
 *.cf
-e~*.o
+e~*
 ghdl_work/
 
-# Compiled binaries
-bin/img_to_mem
-tb_autotest
-tb_video_dump
-test08
+# Root compiled binaries
+/tb_autotest
+/tb_video_dump
+/test08
+
+# Bin directory (Ignore everything EXCEPT shell and awk scripts)
 bin/*
+!bin/*.sh
+!bin/*.awk
 
-
-# Memory and ELF files (generated)
+# =========================
+# Memory, ELF & Generated Data
+# =========================
 mem/*.elf
 mem/*.mem
+config/tmp_video.mem
 
-# Simulation outputs
+# =========================
+# Simulation & Rendering Outputs
+# =========================
 sim/**/*.out
+sim/*.out
+sim/*.setup
 sim/vram_writes.txt
 
+# Rendered frames (keep the .gif, ignore the individual frames)
+frames/*.png
+
+# =========================
+# OS & Editor Files
+# =========================
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# IDE
+# IDEs and Editors
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
 
-# CEP cache
+# =========================
+# Cache & AI Files
+# =========================
 .CEPcache/
-
-# Claude AI files
 .claude/
-
 CLAUDE.md
-
 TODO.md
