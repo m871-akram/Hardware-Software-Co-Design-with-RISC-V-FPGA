@@ -1,7 +1,3 @@
-# =============================================================================
-# .gitignore — Hardware-Software Co-Design with RISC-V & FPGA
-# =============================================================================
-
 # ── GHDL Compilation Artifacts ───────────────────────────────────────────────
 # Object files and library catalogs produced by `ghdl -a`
 # Rebuilt automatically by run_autotest.sh / run_sim.sh
@@ -77,6 +73,5 @@ Desktop.ini
 *.swo
 *~
 *.orig
-
-# ── Claude Code (AI assistant local config) ──────────────────────────────────
-.claude/
+TODO.md
+badges
