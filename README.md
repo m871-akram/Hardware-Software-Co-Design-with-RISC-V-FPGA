@@ -182,93 +182,56 @@ make fpga PROG=invaders LIB=libfemto           # Space Invaders (requires HDMI d
 
 ## Instruction Status
 
+Badges are generated locally by `bash scripts/run_autotest.sh` and committed to `badges/`.
+
 ### Métadonnées
 
-[![timestamp status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//timestamp.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//timestamp.svg)
-
-Fichier de [log](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//log.txt)
+![timestamp](badges/timestamp.svg)
 
 ### Arithmetiques
 
-[![ADDI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//ADDI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//ADDI.svg)
-[![ADD status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//ADD.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//ADD.svg)
-[![SUB status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SUB.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SUB.svg)
+![ADDI](badges/ADDI.svg) ![ADD](badges/ADD.svg) ![SUB](badges/SUB.svg)
 
 ### Basiques
 
-[![REBOUCLAGE status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//REBOUCLAGE.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//REBOUCLAGE.svg)
-[![LUI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LUI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LUI.svg)
+![REBOUCLAGE](badges/REBOUCLAGE.svg) ![LUI](badges/LUI.svg)
 
 ### Divers
 
-[![AUIPC status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//AUIPC.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//AUIPC.svg)
+![AUIPC](badges/AUIPC.svg)
 
 ### Logiques
 
-[![OR status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//OR.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//OR.svg)
-[![ORI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//ORI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//ORI.svg)
-[![AND status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//AND.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//AND.svg)
-[![ANDI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//ANDI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//ANDI.svg)
-[![XOR status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//XOR.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//XOR.svg)
-[![XORI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//XORI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//XORI.svg)
+![OR](badges/OR.svg) ![ORI](badges/ORI.svg) ![AND](badges/AND.svg) ![ANDI](badges/ANDI.svg) ![XOR](badges/XOR.svg) ![XORI](badges/XORI.svg)
 
 ### Décalages
 
-[![SLL status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLL.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLL.svg)
-[![SLLI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLLI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLLI.svg)
-[![SRA status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SRA.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SRA.svg)
-[![SRAI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SRAI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SRAI.svg)
-[![SRL status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SRL.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SRL.svg)
-[![SRLI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SRLI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SRLI.svg)
+![SLL](badges/SLL.svg) ![SLLI](badges/SLLI.svg) ![SRA](badges/SRA.svg) ![SRAI](badges/SRAI.svg) ![SRL](badges/SRL.svg) ![SRLI](badges/SRLI.svg)
 
 ### Sets
 
-[![SLT status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLT.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLT.svg)
-[![SLTI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLTI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLTI.svg)
-[![SLTIU status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLTIU.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLTIU.svg)
-[![SLTU status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLTU.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SLTU.svg)
+![SLT](badges/SLT.svg) ![SLTI](badges/SLTI.svg) ![SLTIU](badges/SLTIU.svg) ![SLTU](badges/SLTU.svg)
 
 ### Branchements
 
-[![BEQ status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BEQ.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BEQ.svg)
-[![BGE status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BGE.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BGE.svg)
-[![BGEU status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BGEU.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BGEU.svg)
-[![BLT status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BLT.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BLT.svg)
-[![BLTU status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BLTU.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BLTU.svg)
-[![BNE status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BNE.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//BNE.svg)
+![BEQ](badges/BEQ.svg) ![BGE](badges/BGE.svg) ![BGEU](badges/BGEU.svg) ![BLT](badges/BLT.svg) ![BLTU](badges/BLTU.svg) ![BNE](badges/BNE.svg)
 
 ### Sauts
 
-[![JAL status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//JAL.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//JAL.svg)
-[![JALR status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//JALR.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//JALR.svg)
+![JAL](badges/JAL.svg) ![JALR](badges/JALR.svg)
 
 ### Loads
 
-[![LB status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LB.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LB.svg)
-[![LBU status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LBU.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LBU.svg)
-[![LH status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LH.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LH.svg)
-[![LHU status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LHU.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LHU.svg)
-[![LW status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LW.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//LW.svg)
+![LB](badges/LB.svg) ![LBU](badges/LBU.svg) ![LH](badges/LH.svg) ![LHU](badges/LHU.svg) ![LW](badges/LW.svg)
 
 ### Stores
 
-[![SB status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SB.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SB.svg)
-[![SH status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SH.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SH.svg)
-[![SW status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SW.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//SW.svg)
+![SB](badges/SB.svg) ![SH](badges/SH.svg) ![SW](badges/SW.svg)
 
 ### Interruptions
 
-[![CSRRC status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRC.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRC.svg)
-[![CSRRCI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRCI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRCI.svg)
-[![CSRRS status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRS.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRS.svg)
-[![CSRRSI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRSI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRSI.svg)
-[![CSRRW status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRW.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRW.svg)
-[![CSRRWI status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRWI.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//CSRRWI.svg)
-[![IT status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//IT.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/Eval/bennassa_lrhorfim_eval//IT.svg)
+![CSRRC](badges/CSRRC.svg) ![CSRRCI](badges/CSRRCI.svg) ![CSRRS](badges/CSRRS.svg) ![CSRRSI](badges/CSRRSI.svg) ![CSRRW](badges/CSRRW.svg) ![CSRRWI](badges/CSRRWI.svg) ![MRET](badges/MRET.svg) ![IT](badges/IT.svg)
 
 ## Travail evalué en présence des enseignants
 
-[![compteur status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/compteur_bennassa_lrhorfim.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/compteur_bennassa_lrhorfim.svg)
-[![chenillard_minimaliste status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/chenillard_minimaliste_bennassa_lrhorfim.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/chenillard_minimaliste_bennassa_lrhorfim.svg)
-[![chenillard_rotation status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/chenillard_rotation_bennassa_lrhorfim.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/chenillard_rotation_bennassa_lrhorfim.svg)
-[![invaders status](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/invaders_bennassa_lrhorfim.svg)](https://CEP_Deploy.pages.ensimag.fr/CEP_Projet_G1_2024_2025/overview/manual/invaders_bennassa_lrhorfim.svg)
+![compteur](badges/COMPTEUR.svg) ![chenillard_minimaliste](badges/CHENILLARD_MINIMALISTE.svg) ![chenillard_rotation](badges/CHENILLARD_ROTATION.svg) ![invaders](badges/invaders.svg)
