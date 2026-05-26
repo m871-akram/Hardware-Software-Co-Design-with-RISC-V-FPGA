@@ -21,7 +21,6 @@ python3 scripts/render_frames.py  # 3. render frames/invaders.gif
 | Xilinx Vivado 2019.1 | source `settings64.sh` before use |
 | `riscv32-unknown-elf-*` GCC | `-march=rv32i -mabi=ilp32` |
 | GHDL | `brew install ghdl` — Vivado-free simulation |
-| GNU Make | — |
 
 Target FPGA: `xc7z010clg400-1`
 
