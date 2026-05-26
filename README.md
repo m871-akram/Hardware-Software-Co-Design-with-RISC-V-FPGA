@@ -168,19 +168,6 @@ make fpga PROG=invaders LIB=libfemto           # Space Invaders (requires HDMI d
 
 ## Full RV32I Base ISA
 
-- **Arithmetic**: ADD, ADDI, SUB
-- **Logical**: AND, ANDI, OR, ORI, XOR, XORI
-- **Shifts**: SLL, SLLI, SRL, SRLI, SRA, SRAI
-- **Comparison**: SLT, SLTI, SLTU, SLTIU
-- **Branches**: BEQ, BNE, BLT, BLTU, BGE, BGEU
-- **Jumps**: JAL, JALR
-- **Loads**: LW, LH, LHU, LB, LBU
-- **Stores**: SW, SH, SB
-- **Upper Immediate**: LUI, AUIPC
-- **CSR**: CSRRW, CSRRS, CSRRC, CSRRWI, CSRRSI, CSRRCI
-- **Interrupts**: MRET (machine return)
-
-## Instruction Status
 
 Badges are generated locally by `bash scripts/run_autotest.sh` and committed to `badges/`.
 
