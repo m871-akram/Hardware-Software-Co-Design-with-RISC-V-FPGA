@@ -26,10 +26,9 @@ VERBOSE :=-intstyle xflow # mettre xflow ou silent
 # LD            := $(TOOLCHAIN_DIR)/$(PREFIX)ld
 # OBJDUMP       := $(TOOLCHAIN_DIR)/$(PREFIX)objdump
 
-## RISCV Toolchain (Mac M1 Fix)
-# We override the directory to point to Homebrew
-TOOLCHAIN_DIR := /opt/homebrew/bin
-# We use the 64-bit toolchain (it works for 32-bit targets too)
+## RISCV Toolchain
+# Use /usr/bin on Linux (school machines), fall back to Homebrew on macOS
+TOOLCHAIN_DIR := $(if $(wildcard /usr/bin/riscv64-unknown-elf-as),/usr/bin,/opt/homebrew/bin)
 PREFIX        := riscv64-unknown-elf-
 
 AS            := $(TOOLCHAIN_DIR)/$(PREFIX)as

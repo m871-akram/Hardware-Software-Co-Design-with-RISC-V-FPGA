@@ -95,8 +95,8 @@ realclean:
 
 ## --- GHDL simulation targets ---
 
-CC_SIM      := /opt/homebrew/bin/riscv64-unknown-elf-gcc
-OBJDUMP_SIM := /opt/homebrew/bin/riscv64-unknown-elf-objdump
+CC_SIM      := $(if $(wildcard /usr/bin/riscv64-unknown-elf-gcc),/usr/bin/riscv64-unknown-elf-gcc,/opt/homebrew/bin/riscv64-unknown-elf-gcc)
+OBJDUMP_SIM := $(if $(wildcard /usr/bin/riscv64-unknown-elf-objdump),/usr/bin/riscv64-unknown-elf-objdump,/opt/homebrew/bin/riscv64-unknown-elf-objdump)
 OBTOMEM     := bin/objtomem.awk
 
 CFLAGS_SIM  := -Os -march=rv32i -mabi=ilp32 -mcmodel=medany \

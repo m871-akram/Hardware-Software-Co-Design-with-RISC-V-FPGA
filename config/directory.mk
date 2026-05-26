@@ -8,7 +8,12 @@ SRC_DIR := program
 USR_DIR := $(shell echo $$USER)/.CEPcache
 
 ifneq ($(wildcard /scratch), )
-  TMP_DIR := /scratch/$(USR_DIR)
+  # Only use /scratch if the user slot is a directory (not a stale file)
+  ifeq ($(shell test -d /scratch/$$USER -o ! -e /scratch/$$USER && echo ok), ok)
+    TMP_DIR := /scratch/$(USR_DIR)
+  else
+    TMP_DIR := /tmp/$(USR_DIR)
+  endif
 else
   TMP_DIR := /tmp/$(USR_DIR)
 endif
